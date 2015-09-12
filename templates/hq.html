@@ -1,0 +1,31 @@
+{% extends "base_mun.html" %}
+{% block content %}
+<h1 style="text-align: center;">HQ</h1>
+<form method="post" style="padding-left: 30px;">
+{% for d in delegates %}
+	<h2> {{d.name}}</h2>
+	<p class="collapse" id="{{d.email.replace("@", 'a').replace(".", 'dot')}}">
+		Institution: {{d.insti}}<br/>
+		Email: {{d.email}}<br/>
+		Phone: {{d.phone}}<br/>
+		Representing: {{d.country}}<br/>
+		Accomodation?: {{d.accm}}<br/>
+		<select name="{{d.email}}">
+			<option value="none"><option>
+  			<option value="India">INDIA</option>
+  			<option value="USA">USA</option>
+  			<option value="Russia">RUSSIA</option>
+  			<option value="China">CHINA</option>
+  			<option value="Japan">JAPAN</option>
+  			<option value="UK">UK</option>
+		</select>
+	</p>
+	<p><a class="btn" data-toggle="collapse" data-target="#{{d.email.replace("@", 'a').replace(".", 'dot')}}">View details &raquo;</a>
+	</p>
+{% endfor %}
+	<div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit Changes!</button>
+    </div>
+</form>
+
+{% endblock %}

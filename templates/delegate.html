@@ -1,0 +1,17 @@
+{% extends 'base_mun.html' %}
+{% block content %}
+<div class="container">
+	<br><br>
+	<form method="post">
+		<div class="form-group">
+	        <button type="submit" class="btn btn-primary">Logout!</button>
+	    </div>
+	</form>	
+	<h3>Name</h3> {{d.name}}</br>
+	<h3>Institution</h3> {{d.insti}}<br/>
+	<h3>Email</h3> {{d.email}}<br/>
+	<h3>Phone</h3> {{d.phone}}<br/>
+	<h3>Representing</h3> {{d.country}}<br/>
+	<h3>Accomodation?</h3> {{d.accm}}<br/>
+</div>
+{% endblock %}

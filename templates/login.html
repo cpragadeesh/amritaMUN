@@ -1,0 +1,22 @@
+{% extends "base_mun.html" %}
+{% block content %}
+<br><br>
+<div class="container">
+	<p>{{error}}</p>
+	<form method="post">
+                <div class="form-group">
+                  <label for="email" class="control-label">Email ID:</label>
+                  <input type="text" class="form-control" style="width: 250px;" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="passwrd" class="control-label">Password:</label>
+                  <input type="password" class="form-control" style="width: 250px;" id="passwrd" name="passwrd" required>
+                </div>
+
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+	</form>
+</div>
+{% endblock %}

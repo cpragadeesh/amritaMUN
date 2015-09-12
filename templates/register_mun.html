@@ -1,0 +1,61 @@
+{% extends "base_mun.html" %}
+{% block content %}
+   <div class="container">
+      <h2>Register as Delegate</h2>
+        <form data-toggle="validator" role="form" method="post">
+          <div class="form-group">
+            <label for="inputName" class="control-label">Name</label>
+            <input name="name" type="text" class="form-control" id="inputName" placeholder="Firstname Lastname" required>
+          </div>
+
+          <div class="form-group">
+            <label for="inputName" class="control-label">Name of the Institution</label>
+            <input name="insti" type="text" class="form-control" id="inputName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="inputName" class="control-label">Phone number</label>
+            <input name="phone" type="number" data-minlength="10" data-maxlength="12" class="form-control" id="inputName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="accm" class="control-label">Accomodation Required?</label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="accm" value="Yes" required>
+                Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="accm" value="No" required>
+                No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputEmail" class="control-label">Email</label>
+            <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="That email address is invalid" required>
+            <div class="help-block with-errors"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputPassword" class="control-label">Password</label>
+            <div class="form-group col-sm-6">
+              <input name="passwrd" type="password" data-minlength="8" class="form-control" id="inputPassword" placeholder="Password" required>
+              <span class="help-block">Minimum of 8 characters</span>
+            </div>
+            <div class="form-group col-sm-6">
+              <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+            
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+        </form>
+    </div>
+{% endblock %}
